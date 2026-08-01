@@ -1,0 +1,15 @@
+stages:
+  - build
+  - deploy
+build-job:
+  stage: build
+  image: docker:29.7.0-cli             
+  variables:
+    DOCKER_HOST: unix:///var/run/docker.sock
+    DOCKER_TLS_CERTDIR: ""
+  script:
+    # - docker build -t agent-backend:v1.0.0 .
+    # - docker build -t agent-frontend:v1.0.0 .
+      - docker compose version
+      - sleep 120
+      - docker compose up -d

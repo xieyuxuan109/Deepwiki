@@ -1,0 +1,13 @@
+# 环境变量文件（包含敏感信息，不应提交到版本库）
+.env
+
+# 编译产物
+deepwiki
+deepwiki.exe
+
+# 临时仓库克隆目录
+data/repos/
+
+# IDE
+.idea/
+.vscode/
